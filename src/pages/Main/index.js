@@ -279,7 +279,7 @@ export default function Main() {
             <button
               onClick={() => {
                 setShowModal(false)
-                alert('teste')}
+                navigate('/presents')}
               }
             >
               ¡Vamos allá!

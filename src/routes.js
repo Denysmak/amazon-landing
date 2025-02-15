@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import Congratulations from './pages/Congratulations';
 import Presents from './pages/Presents';
+import Entrega from './pages/Entrega'
 
 
 function MainRoutes() {
@@ -10,6 +11,7 @@ function MainRoutes() {
       <Route path="/" element={<Main />} />
       <Route path="/congratulations" element={<Congratulations />} />
       <Route path="/presents" element={<Presents />} />
+      <Route path="/entrega" element={<Entrega />} />
     </Routes>
   )
 }
