@@ -1,0 +1,30 @@
+.containerTotal{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.containerBox{
+    border: 5px solid green;
+    padding: 0 10%;
+    flex:1;
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    justify-items: center;
+}
+@media (min-width: 800px) {
+    .containerBox {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+/* Layout menor (2 colunas, 3 linhas) */
+@media (max-width: 799px) {
+    .containerBox {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        
+   
+    }
+}
