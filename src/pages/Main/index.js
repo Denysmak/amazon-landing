@@ -269,12 +269,12 @@ export default function Main() {
       {showModal && (
         <div className="modal">
           <div className="modal-body">
-            <GiftIcon size={60} />
+            <div className='loader'></div>
             <h3>
-              Felicidades, has demostrado que eres una persona real.
+             Análisis de respuestas
             </h3>
             <p>
-            ¡Tienes la oportunidad de recibir una <b>Caja Misteriosa</b>! Para ello, solo tienes que elegir la caja de regalo correcta. Recuerda, solo tienes tres intentos, ¡así que elige con cuidado y buena suerte!
+            Respuestas a las preguntas 5/5
             </p>
             <button
               onClick={() => {
