@@ -24,6 +24,19 @@ export default function Presents() {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
+  const [height, setHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      setHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", updateHeight);
+    updateHeight(); // Atualiza a altura ao iniciar
+
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
 
   const handleBoxamazonClick = () => {
     setClickCount(prevCount => {
@@ -59,7 +72,7 @@ export default function Presents() {
       {/* Tela de carregamento */}
       <div 
         className='telaCarregamentoContainer' 
-        style={{ display: isLoading ? 'flex' : 'none' }}
+        style={{ display: isLoading ? 'flex' : 'none', height: height }}
       >
         <div className="loader"></div>
       </div>
@@ -67,7 +80,7 @@ export default function Presents() {
       {/* Notificação de falta */}
       <div 
         className='notificacaoFaltaContainer' 
-        style={{ display: showNotificacaoFalta ? 'block' : 'none' }}
+        style={{ display: showNotificacaoFalta ? 'block' : 'none',height: height }}
       >
         <div className='notificacaoFalta'>
           <h2>!Ups!</h2>
@@ -84,7 +97,7 @@ export default function Presents() {
       {/* Notificação de participação (segunda) */}
       <div 
         className='notificacaoContainer' 
-        style={{ display: showNotificacao ? 'block' : 'none' }}
+        style={{ display: showNotificacao ? 'block' : 'none',height: height }}
       >
         <div className='notificacao'>
           <img src={presentes} alt="Presentes" />
@@ -103,7 +116,7 @@ export default function Presents() {
       {/* Notificação "primeira" que aparece após o carregamento */}
       <div 
         className='notificacaoContainerPrimeira'  
-        style={{ display: showNotificacaoContainerPrimeira ? 'flex' : 'none' }}
+        style={{ display: showNotificacaoContainerPrimeira ? 'flex' : 'none', height: height }}
       >
         <div className='notificacao'>
           <img src={presentes} alt="Presentes" />
