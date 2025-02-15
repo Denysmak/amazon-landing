@@ -13,7 +13,9 @@ export default function Presents() {
   const [isLoading, setIsLoading] = useState(true);
   // Estado para controlar a exibição da notificacaoContainerPrimeira
   const [showNotificacaoContainerPrimeira, setShowNotificacaoContainerPrimeira] = useState(false);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     // Após 3 segundos, encerra o carregamento e mostra a notificação "primeira"
     const timer = setTimeout(() => {
