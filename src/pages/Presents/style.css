@@ -19,6 +19,14 @@
 
     background-color: rgba(128, 128, 128, 0.5);
 }
+.notificacaoContainerPrimeira{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(128, 128, 128, 0.5);
+}
 .notificacaoFaltaContainer{
     display: none;
     position: absolute;
@@ -78,6 +86,34 @@
 .botaoOk:active{
     background-color: rgb(5, 71, 194);
 }
+
+
+.telaCarregamentoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+
+.loader {
+    border: 8px solid #f3f3f3;      /* Cor de fundo clara */
+    border-top: 8px solid #000000;   /* Cor da borda que gira */
+    border-radius: 50%;             /* Torna o elemento circular */
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite; /* Animação de rotação */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
 @media (min-width: 800px) {
     .containerBox {
         grid-template-columns: repeat(3, 1fr);
