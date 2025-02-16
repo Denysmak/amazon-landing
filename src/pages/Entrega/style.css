@@ -4,7 +4,7 @@
     justify-content: center;
 
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
   
   .circle {
@@ -26,6 +26,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-bottom: 5%;
   }
   .imagemValor{
 
@@ -54,7 +55,7 @@
   
   .containerCircleText p {
     position: absolute;
-    top: 115px;
+    top: 55px;
     color: black;
     margin: 0;
     z-index: 1;  /* Garante que o texto fique acima de outros elementos */
@@ -93,6 +94,165 @@
 .textoBold :nth-child(2){
     color: red;
 }
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Container dos círculos */
+  .circles-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .containerCircleText {
+    text-align: center;
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 auto 10px;
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: rgb(53, 52, 52);
+    margin: 0 10px;
+  }
+  
+  .linha2 {
+    background-color: #ccc; /* Linha mais clara para o segundo passo */
+  }
+  
+  /* Estilos da imagem e valor */
+  .imagemValor {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .imagemValor img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .containerTexto {
+    flex-grow: 1;
+  }
+  
+  .containerTexto p {
+    margin: 5px 0;
+  }
+  
+  .valor {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .valor span {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Estilos dos detalhes do pedido */
+  .detalhesPedido {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .detalhesPedido h3 {
+    margin-top: 0;
+  }
+  
+  .textoEspacado {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .textoBold {
+    font-weight: bold;
+  }
+  
+  /* Estilos do formulário */
+  form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
  
   @media (max-width: 1200px){
     .circles-container {
@@ -137,7 +297,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: black;
+    
         display: flex;
         justify-content: center;
         align-items: center;

@@ -1,8 +1,30 @@
+import React, { useState } from 'react';
 import Header from '../../componentes/header/Header';
 import './style.css';
 import presentes from '../../assets/presentes.jpeg';
+import { useNavigate } from 'react-router-dom';
 
 export default function Entrega() {
+  const navigate = useNavigate();
+  const [error, setError] = useState(''); // Estado para armazenar a mensagem de erro
+
+  // Estados para armazenar os valores dos campos
+  const [direccion, setDireccion] = useState('');
+  const [apto, setApto] = useState('');
+  const [codigoPostal, setCodigoPostal] = useState('');
+  const [ciudad, setCiudad] = useState('');
+
+  const handleClick = () => {
+    // Verifica se os campos obrigatórios estão preenchidos
+    if (!direccion || !codigoPostal || !ciudad) {
+      setError('Por favor, completa todos los campos obligatorios.'); // Mensagem de erro em espanhol
+      return; // Impede o redirecionamento
+    }
+
+    // Se todos os campos obrigatórios estiverem preenchidos, redireciona
+    navigate('/outra-pagina');
+  };
+
   return (
     <>
       <Header naoexibir={true} />
@@ -14,7 +36,7 @@ export default function Entrega() {
         <div className="line"></div>
         <div className="containerCircleText">
           <div className="circle" id="circle2">2</div>
-          <p>Información<br/> del pedido</p>
+          <p>Información<br /> del pedido</p>
         </div>
         <div className="line linha2"></div>
         <div className="containerCircleText">
@@ -24,7 +46,7 @@ export default function Entrega() {
       </div>
 
       <div className='imagemValor'>
-        <img src={presentes}/>
+        <img src={presentes} alt="Presentes" />
         <div className='containerTexto'>
           <p>Set de regalos Amazon</p>
           <p className='valor'><span>$ 1200</span>&nbsp;&nbsp;&nbsp;Sin costo</p>
@@ -46,6 +68,62 @@ export default function Entrega() {
         </div>
       </div>
 
+      <form>
+        <div>
+          <label htmlFor="direccion">Dirección</label>
+          <input
+            type="text"
+            id="direccion"
+            placeholder="Calle y número"
+            value={direccion}
+            onChange={(e) => setDireccion(e.target.value)}
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="apto">Apto, piso, casa, etc. (Opcional)</label>
+          <input
+            type="text"
+            id="apto"
+            placeholder="Apartamento, piso, etc"
+            value={apto}
+            onChange={(e) => setApto(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="codigoPostal">Código postal (C.P)</label>
+          <input
+            type="text"
+            id="codigoPostal"
+            placeholder="Introduce aquí tu Código Postal"
+            value={codigoPostal}
+            onChange={(e) => setCodigoPostal(e.target.value)}
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="ciudad">Ciudad</label>
+          <input
+            type="text"
+            id="ciudad"
+            placeholder="¿Dónde vives?"
+            value={ciudad}
+            onChange={(e) => setCiudad(e.target.value)}
+            required
+          />
+        </div>
+
+        {/* Exibe a mensagem de erro se houver */}
+        {error && <p className="error-message">{error}</p>}
+
+        {/* Botão que redireciona */}
+        <button type="button" onClick={handleClick}>
+          Enviar
+        </button>
+      </form>
     </>
   );
 }
