@@ -76,6 +76,24 @@
     background-color: rgb(216, 216, 216);
     color: #868585;
   }
+  .detalhesPedido{
+
+    width: 90%;
+    margin: auto;
+    max-width: 650px;
+  }
+  .textoEspacado{
+
+    display: flex;
+    justify-content: space-between;
+}
+.textoBold{
+    font-weight: bold;
+}
+.textoBold :nth-child(2){
+    color: red;
+}
+ 
   @media (max-width: 1200px){
     .circles-container {
         margin-bottom: 8%;

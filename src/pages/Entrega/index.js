@@ -30,9 +30,22 @@ export default function Entrega() {
           <p className='valor'><span>$ 1200</span>&nbsp;&nbsp;&nbsp;Sin costo</p>
         </div>
       </div>
-      <h1>testando</h1>
-      <h1>testando</h1>
-      <h1>testando</h1>
+      <div className='detalhesPedido'>
+        <h3>Detalles del pedido</h3>
+        <div className='textoEspacado'>
+          <p>Precio del producto</p>
+          <p>Sin costo</p>
+        </div>
+        <div className='textoEspacado'>
+          <p>Costo de envío</p>
+          <p>$ 42</p>
+        </div>
+        <div className='textoEspacado textoBold'>
+          <p>Total</p>
+          <p>$ 42</p>
+        </div>
+      </div>
+
     </>
   );
 }
