@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid red;
+
     margin-top: 5%;
+    margin-bottom: 5%;
   }
   
   .circle {
@@ -25,8 +26,31 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    border: 2px solid cyan;
   }
+  .imagemValor{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 650px;
+    margin: auto;
+  }
+  .imagemValor img{
+    width: 200px;
+  }
+  .containerTexto{
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  .valor{
+    color: red;
+    margin-top: 5px;
+  }
+  .valor span{
+    text-decoration: line-through;
+    color: black;
+  }
+
   
   .containerCircleText p {
     position: absolute;
@@ -37,7 +61,7 @@
     font-size: 1.2rem;
 }
   .line {
-    width: 140px;
+    width: 180px;
     height: 15px;
     background-color: #333;
     position: relative;
@@ -52,7 +76,31 @@
     background-color: rgb(216, 216, 216);
     color: #868585;
   }
+  @media (max-width: 1200px){
+    .circles-container {
+        margin-bottom: 8%;
+      }
+  }
   @media (max-width: 900px){
+    .imagemValor{
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 65%;
+        min-width: 350px;
+      }
+      .imagemValor img{
+        width: 100px;
+      }
+      .containerTexto{
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+      .valor{
+        color: red;
+        margin-top: 5px;
+      }
     .containerCircleText p {
         position: absolute;
         top: 55px;
@@ -79,6 +127,10 @@
         position: relative;
         font-size: 1.5rem;
       }
+      .circles-container {
+        margin-bottom: 50px;
+      }
+      
 
   .linha2 {
     background-color: rgb(216, 216, 216);

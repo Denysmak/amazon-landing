@@ -1,5 +1,6 @@
 import Header from '../../componentes/header/Header';
 import './style.css';
+import presentes from '../../assets/presentes.jpeg';
 
 export default function Entrega() {
   return (
@@ -19,6 +20,14 @@ export default function Entrega() {
         <div className="containerCircleText">
           <div className="circle" id="circle3">3</div>
           <p>Pago</p>
+        </div>
+      </div>
+
+      <div className='imagemValor'>
+        <img src={presentes}/>
+        <div className='containerTexto'>
+          <p>Set de regalos Amazon</p>
+          <p className='valor'><span>$ 1200</span>&nbsp;&nbsp;&nbsp;Sin costo</p>
         </div>
       </div>
       <h1>testando</h1>
