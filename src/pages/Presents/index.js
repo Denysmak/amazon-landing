@@ -10,7 +10,7 @@ export default function Presents() {
   const [showNotificacaoFalta, setShowNotificacaoFalta] = useState(false);
   const [showNotificacao, setShowNotificacao] = useState(false);
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [showNotificacaoContainerPrimeira, setShowNotificacaoContainerPrimeira] = useState(false);
   const [height, setHeight] = useState(window.innerHeight);
 
@@ -22,7 +22,7 @@ export default function Presents() {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setShowNotificacaoContainerPrimeira(true);
-    }, 3000);
+    }, 0);
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,7 +39,7 @@ export default function Presents() {
     setTimeout(() => {
       setIsLoading(false);
       if (callback) callback();
-    }, 3000);
+    }, 2000);
   }
 
   const handleBoxamazonClick = () => {

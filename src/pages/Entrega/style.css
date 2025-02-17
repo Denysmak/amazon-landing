@@ -6,6 +6,32 @@
     margin-top: 5%;
     margin-bottom: 10%;
   }
+  .telaCarregamentoContainer {
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #000000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
   
   .circle {
     width: 100px;
@@ -318,14 +344,34 @@ body {
       
   }
   @media (max-width: 500px){
-    .line {
-        width: 60px;
-        height: 5px;
-        background-color: #333;
+    .circles-container {
+      margin-bottom: 35px;
+      width: 65%;
+    }
+    .circles-container p{
+      font-size: 0.9rem;
+    }
+    .imagemValor{
+      width: 50%;
+      min-width: 300px;
+    }
+    .imagemValor img{
+      width: 80px;
+      height: 80px;
+    }
+    .containerTexto{
+      color: blue;
+      font-size: 1rem;
+    }
+      .circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
         position: relative;
+        font-size: 1.2rem;
       }
-      .linha2 {
-        background-color: rgb(216, 216, 216);
-      }
-      
   }
