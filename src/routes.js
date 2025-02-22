@@ -3,9 +3,10 @@ import Main from './pages/Main';
 import Congratulations from './pages/Congratulations';
 import Presents from './pages/Presents';
 import Entrega from './pages/Entrega'
-
+import useUTMPreserve from './useUTMPreserve';
 
 function MainRoutes() {
+  useUTMPreserve();
   return (
     <Routes>
       <Route path="/" element={<Main />} />

@@ -100,6 +100,25 @@ export default function Presents() {
           <p>¡Tienes 3 intentos, buena suerte!</p>
           <button className='botaoOk' onClick={() => setShowNotificacaoContainerPrimeira(false)}>OK</button>
         </div>
+
+
+
+
+        <script>
+window.pixelId = "676a054f402f32fdec2f7281";
+var a = document.createElement("script");
+a.setAttribute("async", "");
+a.setAttribute("defer", "");
+a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(a);
+</script>
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async defer>
+</script>
+
+
+
+
+
       </div>
     </div>
   );

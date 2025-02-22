@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IoIosSearch } from "react-icons/io";
-import { FaInfoCircle } from "react-icons/fa";
-import { FaCartShopping } from "react-icons/fa6";
-import { Gift, GiftIcon } from 'lucide-react';
+
 import { useNavigate } from 'react-router'
 import Header from '../../componentes/header/Header';
 import './styles.css';
@@ -68,13 +65,13 @@ export default function Main() {
     },
     {
       id: 4,
-      text: "¿Cuál es tu talla para ropa de arriba?",
-      options: ["XS", "S", "M", "L", "XL"]
+      text: "¿Con qué frecuencia te encuentras con falta de información (por ejemplo, fotos, características, opiniones)?",
+      options: ["Nunca", "Rara vez", "A veces", "Muy a menudo"]
     },
     {
       id: 5,
-      text: "¿Cuál es tu talla para ropa de abajo?",
-      options: ["34", "36", "38", "40", "42", "44"]
+      text: "¿Cómo calificarías tu experiencia general en Amazon?",
+      options: ["Positiva", "Negativa"]
     }
   ];
 
@@ -155,9 +152,9 @@ export default function Main() {
             </div>
             <div className="description-container">
               <h2 className="product-title">Obtén tu Caja Misteriosa</h2>
-              <h3><p className='product-price-old'><s>$ 99</s></p><p className='product-price-new'>$ 4.90</p></h3>
+              <h3><p className='product-price-old'><s>$ 99</s></p><p className='product-price-new'>$ Sin costo</p></h3>
               <p className="product-description">
-                Para atraer nuevos clientes, lanzamos una nueva promoción. ¡Solo los primeros 100 participantes tendrán la oportunidad de ganar una caja misteriosa de Amazon! ¡Tu caja puede contener cualquier artículo por un valor total de 100 euros! Si el contenido de tu caja no te gusta, puedes devolverla y recibir una nueva. Hoy, estás invitado a participar en este concurso. Las fichas de producto muestran ejemplos de lo que podría estar en tu caja. Así es como funciona: responde a 5 preguntas simples y recibe una caja misteriosa de Amazon.
+                Para atraer nuevos clientes, lanzamos una nueva promoción. ¡Solo los primeros 100 participantes tendrán la oportunidad de ganar una caja misteriosa de Amazon! Si el contenido de tu caja no te gusta, puedes devolverla y recibir una nueva. Hoy, estás invitado a participar en este concurso. Las fichas de producto muestran ejemplos de lo que podría estar en tu caja. Así es como funciona: responde a 5 preguntas simples y recibe una caja misteriosa de Amazon.
               </p>
               <div className="timer">
                 <span className="timer-label">La oferta termina en</span>
@@ -290,6 +287,27 @@ export default function Main() {
             </p>
            
           </div>
+
+
+
+          <script>
+window.pixelId = "676a054f402f32fdec2f7281";
+var a = document.createElement("script");
+a.setAttribute("async", "");
+a.setAttribute("defer", "");
+a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(a);
+</script>
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async defer>
+</script>
+
+
+
+
+
+
+
+
         </div>
       )}
 
