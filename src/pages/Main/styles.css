@@ -1,17 +1,19 @@
 .header {
   height: 60px;
-  background-color: #131921;
+  background-color: rgb(255, 238, 0);
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 .loader {
   width: 50px;
   height: 50px;
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
+
+
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  
 }
 
 @keyframes spin {
@@ -22,12 +24,14 @@
 .header .logo {
   display: flex;
   margin-left: 20px;
-  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .header .logo .img-logo {
-  width: 100px;
-  height: 35px;
+  width: 70px;
+  height: 50px;
+
 }
 
 .header .logo p {
@@ -40,6 +44,8 @@
   width: 80%;
   display: flex;
   max-width: 500px;
+  border-radius: 2px;
+
 }
 
 .header .serach-box input {
@@ -47,19 +53,17 @@
   height: 40px;
   max-width: 500px;
   text-indent: 10px;
-  border-radius: 5px 0 0 5px;
   font-size: 16px;
 }
 
 .header .serach-box button {
   padding: 0px 8px 0px 8px;
-  border-radius: 0 5px 5px 0;
   cursor: pointer;
-  background-color: #f1ad54;
+  background-color: white;
 }
 
 .header .infos {
-  color: #FFFFFF;
+  color: #000000;
   margin-right: 20px;
   display: flex;
   gap: 30px;
@@ -68,7 +72,7 @@
 .header .infos p {
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .carousel-container {
@@ -331,27 +335,29 @@ main {
 
 @media screen and (max-width: 768px) {
   .header {
-    height: auto;
-    flex-direction: column;
-    padding: 10px 0;
+    height: 60px;
   }
 
   .header .logo {
-    margin: 10px 0;
     justify-content: center;
-    width: 100%;
+    width: 10%;
+    margin: 0 14px;
   }
 
+
   .header .serach-box {
-    width: 90%;
-    margin: 10px auto;
+    width: 100%;
+
+
   }
 
   .header .infos {
-    width: 100%;
-    margin: 10px 0;
+    width: 30%;
+    min-width: 130px;
+
     justify-content: center;
-    gap: 15px;
+    flex-direction: row;
+
   }
 
   .carousel-container {
@@ -476,13 +482,26 @@ main {
 /* Extra Small Devices */
 @media screen and (max-width: 480px) {
   .header .infos {
-    flex-direction: column;
+    min-width: 90px;
+    margin-right: 10px;
+    margin-left: 10px;
     align-items: center;
     gap: 10px;
-  }
 
-  .header .infos p {
-    font-size: 16px;
+  }
+  .header .logo{
+
+    width: 20%;
+  }
+  .header .logo .img-logo {
+
+    width: 55px;
+    height: 40px;
+  }
+  .header .serach-box button {
+    padding: 0px 0px 0px 8px;
+    cursor: pointer;
+    background-color: white;
   }
 
   .product-title {

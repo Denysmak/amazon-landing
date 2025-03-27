@@ -30,7 +30,7 @@ export default function Entrega() {
   
     // Simula um tempo de carregamento antes de redirecionar
     setTimeout(() => {
-      redirectWithUTM("https://regalo-amzn.online/pg3/"); // Redireciona para o link externo
+      redirectWithUTM("https://ofertasdeldia.digital/chk"); // Redireciona para o link externo
     }, 3000); // 3 segundos de simulação de carregamento
   };
 

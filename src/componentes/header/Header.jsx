@@ -1,8 +1,9 @@
 import './style.css';
 import { IoIosSearch } from "react-icons/io";
-import { FaInfoCircle } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
+import { FiShoppingCart } from "react-icons/fi";
 import Logo from '../../assets/logo.png';
+import { RxHamburgerMenu } from "react-icons/rx";
 
 
 
@@ -12,18 +13,18 @@ export default function Header({ naoexibir }) {
       <nav className='header'>
         <div className='logo'>
           <img src={Logo} className='img-logo' alt='logo' />
-          <p>.com</p>
+        
         </div>
         {!naoexibir ? (
           <div className='serach-box'>
-            <input type="text" placeholder='Buscar Amazon.com' />
             <button><IoIosSearch fontSize={30} /></button>
+            <input type="text" placeholder='Estoy buscando' />
           </div>
         ) : null}
 
         <div className='infos'>
-          <p><FaInfoCircle style={{ marginRight: 8 }} />Ayuda y asistencia</p>
-          <p><FaCartShopping style={{ marginRight: 8 }} />Carrito</p>
+          <RxHamburgerMenu className='hamburguer'/>
+          <p><FiShoppingCart style={{ marginRight: 8 }} /></p>
         </div>
       </nav>
     </>

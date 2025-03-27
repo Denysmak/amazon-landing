@@ -1,0 +1,12 @@
+.hamburguer{
+    color: black;
+    height: 30px;
+    width: 30px;
+
+}
+@media screen and (max-width: 768px) {
+    .hamburguer{
+        height: 40px;
+        width: 35px;
+    }
+}
