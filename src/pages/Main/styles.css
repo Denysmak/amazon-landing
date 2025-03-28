@@ -2,9 +2,32 @@
   height: 60px;
   background-color: rgb(255, 238, 0);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
 
+  padding: 8px;
+
+}
+.mt-4{
+
+  display: flex;
+  
+  justify-content: space-between;
+}
+.text-lg{
+  display: flex;
+  align-items: center;
+}
+.container{
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.localiza{
+  padding: 5px;
+  margin: 5px 0px;
 }
 .loader {
   width: 50px;
@@ -44,8 +67,8 @@
   width: 80%;
   display: flex;
   max-width: 500px;
-  border-radius: 2px;
-
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(65, 65, 65, 0.1);
 }
 
 .header .serach-box input {
@@ -54,6 +77,7 @@
   max-width: 500px;
   text-indent: 10px;
   font-size: 16px;
+  
 }
 
 .header .serach-box button {
@@ -335,7 +359,7 @@ main {
 
 @media screen and (max-width: 768px) {
   .header {
-    height: 60px;
+    height: 80px;
   }
 
   .header .logo {
