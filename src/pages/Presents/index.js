@@ -81,7 +81,7 @@ export default function Presents() {
       <div className='notificacaoContainer' style={{ display: showNotificacao ? 'block' : 'none', height: height }}>
         <div className='notificacao'>
           <img src={presentes} alt="Presentes" />
-          <h3>!Felicidades! ¡Has ganado nuestro premio: el set de regalo Amazon!</h3>
+          <h3>¡Felicidades! ¡Has ganado nuestro premio: el set de regalo de Mercado Libre!</h3>
           <p>Todo lo que necesitas hacer es completar la información requerida y pagar el costo de envío.</p>
           <p>El paquete será entregado en un plazo de 3 días.</p>
           <button className='botaoOk'  onClick={() => {
@@ -95,7 +95,7 @@ export default function Presents() {
         <div className='notificacao'>
           <img src={presentes} alt="Presentes" />
           <h3>Gracias por tu participación</h3>
-          <p>¡Se le ofrece la oportunidad de recibir el set de regalo Amazon!</p>
+          <p>¡Se le ofrece la oportunidad de recibir el set de regalo de Mercado Libre!</p>
           <p>Todo lo tienes que hacer es elegir la caja correcta.</p>
           <p>¡Tienes 3 intentos, buena suerte!</p>
           <button className='botaoOk' onClick={() => setShowNotificacaoContainerPrimeira(false)}>OK</button>

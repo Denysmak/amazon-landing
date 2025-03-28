@@ -40,7 +40,7 @@ export default function Header({ naoexibir }) {
         {!naoexibir ? (
           <div className='serach-box'>
             <button><IoIosSearch fontSize={30} /></button>
-            <input type="text" placeholder='Estoy buscando' />
+            <input type="text" placeholder='Estoy buscando...' />
           </div>
         ) : null}
 

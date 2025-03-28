@@ -70,7 +70,7 @@ export default function Main() {
     },
     {
       id: 5,
-      text: "¿Cómo calificarías tu experiencia general en Amazon?",
+      text: "¿Cómo calificarías tu experiencia general en Mercado Libre?",
       options: ["Positiva", "Negativa"]
     }
   ];
@@ -154,7 +154,7 @@ export default function Main() {
               <h2 className="product-title">Obtén tu Caja Misteriosa</h2>
               <h3><p className='product-price-old'><s>$ 99</s></p><p className='product-price-new'>$ Sin costo</p></h3>
               <p className="product-description">
-                Para atraer nuevos clientes, lanzamos una nueva promoción. ¡Solo los primeros 100 participantes tendrán la oportunidad de ganar una caja misteriosa de Amazon! Si el contenido de tu caja no te gusta, puedes devolverla y recibir una nueva. Hoy, estás invitado a participar en este concurso. Las fichas de producto muestran ejemplos de lo que podría estar en tu caja. Así es como funciona: responde a 5 preguntas simples y recibe una caja misteriosa de Amazon.
+              Para atraer nuevos clientes, lanzamos una nueva promoción. ¡Solo los primeros 100 participantes tendrán la oportunidad de ganar una caja misteriosa de Mercado Libre! Si el contenido de tu caja no te gusta, puedes devolverla y recibir una nueva. Hoy, estás invitado a participar en este concurso. Las fichas de producto muestran ejemplos de lo que podría estar en tu caja. Así es como funciona: responde a 5 preguntas simples y recibe una caja misteriosa de Mercado Libre.
               </p>
               <div className="timer">
                 <span className="timer-label">La oferta termina en</span>

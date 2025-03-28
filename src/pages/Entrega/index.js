@@ -73,7 +73,7 @@ export default function Entrega() {
       <div className='imagemValor'>
         <img src={presentes} alt="Presentes" />
         <div className='containerTexto'>
-          <p>Set de regalos Amazon</p>
+          <p>Set de regalos de Mercado Libre</p>
           <p className='valor'><span>$ 1200</span>&nbsp;&nbsp;&nbsp;Sin costo</p>
         </div>
       </div>
